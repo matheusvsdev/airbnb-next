@@ -1,5 +1,7 @@
-import Logo from "@/components/Logo/Logo";
+import Logo from "@/components/Logo";
 import Link from "next/link";
+import IconButton from "@/components/IconButton";
+import { IconUserCircle } from "@tabler/icons-react";
 
 export default function TopBar() {
   return (
@@ -14,7 +16,11 @@ export default function TopBar() {
             Experiências
           </Link>
         </div>
-        <button className="rounded-md border-2">Entrar</button>
+        <IconButton
+          icon={<IconUserCircle aria-label="Ícone de usuário" size={20} />}
+        >
+          Entrar
+        </IconButton>
       </div>
     </>
   );
