@@ -46,7 +46,7 @@ export default function Accommodation({
           </div>
         </div>
         <div>{date}</div>
-        <div className="font-semibold">R${price}</div>
+        <div className="font-semibold">R${price} <span className="font-normal">noite</span></div>
       </figcaption>
     </figure>
   );

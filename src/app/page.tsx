@@ -12,7 +12,7 @@ export default function Home() {
         <SearchBar />
       </header>
 
-      <hr className="my-6 opacity-10"/>
+      <hr className="my-6 opacity-10" />
 
       <main className="container mx-auto">
         <HorizontalNavbar />
