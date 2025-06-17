@@ -7,7 +7,7 @@ export default function SearchBar() {
       
       <div className="flex w-full justify-around">
         
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col items-start cursor-pointer">
           <label className="text-sm font-semibold">Onde</label>
           <input className="w-32 text-sm focus:outline-none border-r-1 border-gray-300" type="text" placeholder="Buscar destinos" />
         </div>
