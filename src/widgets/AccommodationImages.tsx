@@ -21,7 +21,7 @@ export default function AccommodationImages({
         return (
           <div key={index} className={`${firstPhoto}`}>
             <Image
-              className="w-full aspect-square object-cover"
+              className="w-full aspect-square object-cover mt-2"
               src={photo.source}
               alt={photo.description}
               width={1280}

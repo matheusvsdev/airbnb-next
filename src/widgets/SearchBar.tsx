@@ -7,7 +7,7 @@ export default function SearchBar() {
   const [showSearch, setShowSearch] = useState(false);
 
   return (
-    <div className="w-full max-w-2xl mx-auto border-1 border-gray-200 flex items-center rounded-full overflow-clip px-4 py-2 shadow-lg shadow-gray-200">
+    <div className="w-full max-w-sm md:max-w-2xl mx-auto border-1 border-gray-200 flex items-center rounded-full overflow-clip px-4 py-2 shadow-lg shadow-gray-200">
       <div className="flex w-full justify-around">
         <div className="flex flex-col items-start cursor-pointer border-r-1 border-gray-300">
           <label className="text-sm font-semibold">Onde</label>
@@ -20,7 +20,7 @@ export default function SearchBar() {
           />
         </div>
 
-        <div className="flex flex-col items-start border-r-1 border-gray-300">
+        <div className="hidden md:flex flex-col items-start border-r-1 border-gray-300">
           <label className="text-sm font-semibold">Check-in</label>
           <input
             className="w-32 text-sm focus:outline-none"
@@ -31,7 +31,7 @@ export default function SearchBar() {
           />
         </div>
 
-        <div className="flex flex-col items-start border-r-1 border-gray-300">
+        <div className="hidden md:flex flex-col items-start border-r-1 border-gray-300">
           <label className="text-sm font-semibold">Checkout</label>
           <input
             className="w-32 text-sm focus:outline-none"
@@ -42,7 +42,7 @@ export default function SearchBar() {
           />
         </div>
 
-        <div className="flex flex-col items-start">
+        <div className="hidden md:flex flex-col items-start">
           <label className="text-sm font-semibold">Quem</label>
           <input
             className="w-20 text-sm focus:outline-none"

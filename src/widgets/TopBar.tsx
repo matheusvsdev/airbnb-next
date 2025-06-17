@@ -9,7 +9,7 @@ export default function TopBar() {
     <>
       <div className="py-6 flex justify-between items-center">
         <Logo />
-        <div className="flex gap-8 ml-40">
+        <div className="hidden md:flex gap-8">
           
           <LinkButton
             icon={<IconHome aria-label="Ícone casa" size={32} />}
@@ -34,9 +34,6 @@ export default function TopBar() {
 
         </div>
         <div className="flex items-center gap-4">
-          <Link className="font-semibold text-sm hover:bg-gray-100 p-3 rounded-full" href="/">
-            Torne-se um anfitrião
-          </Link>
           <div className="flex items-center gap-2">
             <CircleButton
               icon={<IconWorld aria-label="Ícone de região" size={20} />}
