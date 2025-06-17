@@ -1,4 +1,6 @@
+import AccommodationDetails from "@/widgets/AccommodationDetails";
 import AccommodationImages, { Photos } from "@/widgets/AccommodationImages";
+import AccommodationTestimonials from "@/widgets/AccommodationTestimonials";
 import Footer from "@/widgets/Footer";
 import SearchBar from "@/widgets/SearchBar";
 import TopBar from "@/widgets/TopBar";
@@ -7,10 +9,15 @@ interface PageProps {
   id: string;
 }
 
+interface Location {
+  description: string;
+}
+
 interface Accommodation {
   slug: string;
   title: string;
   photos: Photos[];
+  location: Location;
 }
 
 export default async function Page({ params }: { params: PageProps }) {
@@ -36,6 +43,10 @@ export default async function Page({ params }: { params: PageProps }) {
       <main className="container mx-auto py-6">
         <h1 className="text-3xl font-semibold">{accommodation.title}</h1>
         <AccommodationImages photos={accommodation.photos} />
+        <div className="flex flex-col md:flex-row">
+            <AccommodationDetails description={accommodation.location.description} />
+            <AccommodationTestimonials />
+        </div>
       </main>
 
       <footer className="bg-gray-100">

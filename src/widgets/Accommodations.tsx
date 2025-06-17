@@ -2979,7 +2979,7 @@ export default function Accommodations() {
         <div key={index}>
           <Link href={item.slug}>
             <Accommodation
-              location={item.location.description}
+              location={item.location.city}
               date={item.date}
               price={item.price}
               evaluation={item.rating}
