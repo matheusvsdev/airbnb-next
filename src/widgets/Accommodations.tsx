@@ -1,6 +1,6 @@
 import Accommodation from "@/components/Accommodation";
 import Image from "next/image";
-
+import Link from "next/link";
 
 const accommodationList = [
   {
@@ -2973,27 +2973,29 @@ const accommodationList = [
 ];
 
 export default function Accommodations() {
-  return(
+  return (
     <section className="py-6  grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {accommodationList.map((item, index) => (
-            <div key={index}>
-                <Accommodation
-                  location={item.location.description}
-                  host={item.host}
-                  date={item.date}
-                  price={item.price}
-                  evaluation={item.rating}
-                  badge={item.hasBadge}
-                >
-                  <Image className="w-full aspect-square object-cover rounded-xl cursor-pointer"
-                    src={item.photos[0].source}
-                    alt={item.photos[0].description}
-                    width={300}
-                    height={300}
-                />
-                </Accommodation>
-            </div>
-        ))}
+      {accommodationList.map((item, index) => (
+        <div key={index}>
+          <Link href={item.slug}>
+            <Accommodation
+              location={item.location.description}
+              date={item.date}
+              price={item.price}
+              evaluation={item.rating}
+              badge={item.hasBadge}
+            >
+              <Image
+                className="w-full aspect-square object-cover rounded-xl"
+                src={item.photos[0].source}
+                alt={item.photos[0].description}
+                width={300}
+                height={300}
+              />
+            </Accommodation>
+          </Link>
+        </div>
+      ))}
     </section>
   );
 }
