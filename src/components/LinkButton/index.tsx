@@ -15,7 +15,7 @@ export default function LinkButton(props: LinkButtonProps) {
         } group`}
         href="/"
       >
-        <span className="transition-transform duration-200 group-hover:scale-125" style={{ color: props.color }}>
+        <span className="transition-transform duration-300 group-hover:scale-125" style={{ color: props.color }}>
           {props.icon}
         </span>
         <span>{props.children}</span>

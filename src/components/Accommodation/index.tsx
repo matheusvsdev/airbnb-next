@@ -21,7 +21,7 @@ export default function Accommodation({
           Preferido dos hóspedes
         </span>
         <IconHeartFilled
-          className="stroke-white opacity-80 cursor-pointer hover:text-red-500"
+          className="stroke-white opacity-80 cursor-pointer transition-color-transform duration-300 hover:opacity-100 hover:text-red-500 hover:scale-125"
           aria-label="Favoritos"
           size={25}
         />
@@ -30,7 +30,7 @@ export default function Accommodation({
       <figcaption className="pt-2">
         <div className="flex flex-row justify-between">
           <span className="font-normal">{location}</span>
-          <div className="flex flex-row items-center gap-1">
+          <div className="flex flex-row items-center gap-1 text-red-500">
             <IconStarFilled aria-label="Avaliações" size={15} />
             <span className="font-normal">{evaluation}</span>
           </div>

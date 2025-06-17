@@ -111,7 +111,7 @@ export default function HorizontalNavbar() {
           <SwiperSlide key={index}>
             <Link
               href={icon.url}
-              className="flex flex-col items-center hover:text-red-500"
+              className="flex flex-col items-center transition-color-transform duration-300 hover:text-red-500"
             >
               <Image
                 src={icon.source}

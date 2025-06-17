@@ -39,11 +39,11 @@ export default function TopBar() {
           </Link>
           <div className="flex items-center gap-2">
             <CircleButton
-              icon={<IconWorld aria-label="Ícone de usuário" size={20} />}
+              icon={<IconWorld aria-label="Ícone de região" size={20} />}
             >
             </CircleButton>
             <CircleButton
-              icon={<IconMenu2 aria-label="Ícone de usuário" size={20} />}
+              icon={<IconMenu2 aria-label="Ícone de menu" size={20} />}
             >
             </CircleButton>
           </div>
