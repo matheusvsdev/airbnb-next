@@ -1,3 +1,15 @@
-import { IconUserCircle, IconSearch, IconAdjustmentsHorizontal } from "@tabler/icons-react";
+import {
+  IconUserCircle,
+  IconSearch,
+  IconAdjustmentsHorizontal,
+  IconHeartFilled,
+  IconStarFilled,
+} from "@tabler/icons-react";
 
-export { IconUserCircle, IconSearch };
+export {
+  IconUserCircle,
+  IconSearch,
+  IconAdjustmentsHorizontal,
+  IconHeartFilled,
+  IconStarFilled,
+};

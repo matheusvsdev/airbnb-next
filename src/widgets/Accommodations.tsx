@@ -1,7 +1,8 @@
+import Accommodation from "@/components/Accommodation";
 import Image from "next/image";
 
 
-const accommodation = [
+const accommodationList = [
   {
     number: 1,
     date: "8 - 13 de jan",
@@ -2971,17 +2972,26 @@ const accommodation = [
   },
 ];
 
-export default function Accommodation() {
+export default function Accommodations() {
   return(
     <section className="py-6  grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {accommodation.map((accommodation, index) => (
+        {accommodationList.map((item, index) => (
             <div key={index}>
-                <Image className="w-full aspect-square object-cover rounded-xl"
-                    src={accommodation.photos[0].source}
-                    alt={accommodation.photos[0].description}
+                <Accommodation
+                  location={item.location.description}
+                  host={item.host}
+                  date={item.date}
+                  price={item.price}
+                  evaluation={item.rating}
+                  badge={item.hasBadge}
+                >
+                  <Image className="w-full aspect-square object-cover rounded-xl cursor-pointer"
+                    src={item.photos[0].source}
+                    alt={item.photos[0].description}
                     width={300}
                     height={300}
                 />
+                </Accommodation>
             </div>
         ))}
     </section>

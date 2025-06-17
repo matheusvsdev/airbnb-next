@@ -1,4 +1,4 @@
-import Accommodation from "@/widgets/Accommodation";
+import Accommodations from "@/widgets/Accommodations";
 import HorizontalNavbar from "@/widgets/HorizontalNavbar";
 import SearchBar from "@/widgets/SearchBar";
 import TopBar from "@/widgets/TopBar";
@@ -15,7 +15,7 @@ export default function Home() {
 
       <main className="container mx-auto">
         <HorizontalNavbar />
-        <Accommodation />
+        <Accommodations />
       </main>
 
       <footer className="container mx-auto">
