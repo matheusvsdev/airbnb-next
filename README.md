@@ -1,37 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Airbnb Clone - Next.js
 
-## Getting Started
+Este projeto é uma aplicação inspirada no Airbnb, desenvolvida com **Next.js**, que consome dados de uma API externa. Ele permite visualizar acomodações disponíveis e acessar detalhes específicos de cada hospedagem.
 
-First, run the development server:
+## Imagens do projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Tela Principal
+![Tela Principal](public/images/principal.png)
+
+### Tela de Detalhes
+![Tela de Detalhes](public/images/detalhes.png)
+
+## Tecnologias
+
+- **Next.js** - Framework de React para aplicações modernas
+- **TypeScript** - Tipagem segura para um código mais confiável
+- **Tailwind CSS** - Estilização eficiente com classes utilitárias
+- **API Externa** - Dados fornecidos pela API [`https://web.codans.com.br/airbnb`](https://web.codans.com.br/airbnb)
+
+## Instalação
+
+1. Clone o repositório:
+    ```bash
+    git clone https://github.com/matheusvsdev/airbnb-next.git
+    ```
+
+2. Instale as dependências do projeto:
+
+    ```bash
+    npm install
+    ```
+
+3. Inicie a aplicação:
+
+    ```bash
+    npm run dev
+    ```
+
+4. Acesse a url: [http://localhost:3000](http://localhost:3000) no seu navegador.
+
+## Funcionalidades
+
+Página principal: Lista acomodações com imagens e preços.
+
+Detalhes da hospedagem: Ao clicar em uma acomodação, a aplicação redireciona para uma página de detalhes.
+
+Consumo dinâmico da API: Os dados são obtidos diretamente do endpoint.
+
+## Estrutura do projeto
+
+```plaintext
+airbnb-clone/
+│── .next/      
+│── node_modules/      
+│── public/      
+│── src/
+│   ├── app/       
+│   ├── assets/    
+│   ├── components/ 
+│   ├── types/     
+│   ├── utils/     
+│   ├── widgets/
+│── .gitignore
+│── eslint.config.mjs
+│── next-env.d.ts
+│── next.config.ts
+│── package-lock.json
+│── package.json
+│── postcss.config.mjs
+│── README.md
+│── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# API utilizada
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+A aplicação consome os dados da API externa, obtendo informações como:
+- Título, descrição, localização, fotos da acomodação, etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# airbnb-next
+Endpoint: https://web.codans.com.br/airbnb
